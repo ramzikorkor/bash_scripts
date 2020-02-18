@@ -26,14 +26,24 @@ LIGHTCYAN='\033[1;36m'
 WHITE='\033[1;37m'
 NC='\033[0m' # No Color
 
-REPO1="...path"
-REPO2="...path"
-REPO3="...path"
-REPO4="...path"
+#REPO1="...path"
+#REPO2="...path"
+#REPO3="...path"
+#REPO4="...path"
 
  # Create REPOS array to be used in functions:
-REPOS=($REPO1 $REPO2 $REPO3 $REPO4)
-REPO_NAME=("REPO1" "REPO2" "REPO3" "REPO4")
+#REPOS=($REPO1 $REPO2 $REPO3 $REPO4)
+#REPO_NAME=("REPO1" "REPO2" "REPO3" "REPO4")
+
+# Add repo paths here:
+LIBRARY="/c/Projects/repos/library/NearLo.RTS.API.AngularLibrary"
+MOBILE="/c/Projects/repos/mobile/NearLo.Sp.Rts.Ionic.Mobile"
+PORTAL="/c/Projects/repos/portal/NearLo-RTS-Ng-Portal"
+FRAMEWORK="/c/Projects/repos/framework/NearLo.Framework"
+ 
+ # Create REPOS array to be used in functions:
+REPOS=($LIBRARY $MOBILE $PORTAL $FRAMEWORK)
+REPO_NAME=("Library" "Mobile" "Portal" "Framework")
 
 # Silences pushd & popd outputs:
 function pushd () {
@@ -47,10 +57,11 @@ function popd () {
 function error_text() {
 	printf "Usage: ./branch <command>\n"
 	printf "where <command> is one of the following.\n"
-	printf "update, prune\n"
+	printf "update, prune, status\n"
 	printf "\n"
 	printf "./branch update - Updates REPOS with develop assuming the branches are on develop branch\n"
 	printf "./branch prune - Prunes remote branches for all REPOS\n"
+	printf "./branch status - Checks status for all REPOS\n"
 }
 
 function update_branches() {
