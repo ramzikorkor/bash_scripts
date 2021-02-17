@@ -33,17 +33,18 @@ NC='\033[0m' # No Color
 
  # Create REPOS array to be used in functions:
 #REPOS=($REPO1 $REPO2 $REPO3 $REPO4)
-#REPO_NAME=("REPO1" "REPO2" "REPO3" "REPO4")
+#REPO_NAME=("REPO1" "REPO2" "REPO3" "REPO4" "etc....")
 
 # Add repo paths here:
 LIBRARY="/c/Projects/repos/library/NearLo.RTS.API.AngularLibrary"
 MOBILE="/c/Projects/repos/mobile/NearLo.Sp.Rts.Ionic.Mobile"
 PORTAL="/c/Projects/repos/portal/NearLo-RTS-Ng-Portal"
 FRAMEWORK="/c/Projects/repos/framework/NearLo.Framework"
+DATABASE="/c/Projects/repos/database/NearLo.RTS.Databases"
  
  # Create REPOS array to be used in functions:
-REPOS=($LIBRARY $MOBILE $PORTAL $FRAMEWORK)
-REPO_NAME=("Library" "Mobile" "Portal" "Framework")
+REPOS=($LIBRARY $MOBILE $PORTAL $FRAMEWORK $DATABASE)
+REPO_NAME=("Library" "Mobile" "Portal" "Framework" "Database")
 
 # Silences pushd & popd outputs:
 function pushd () {
